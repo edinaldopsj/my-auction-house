@@ -1,6 +1,6 @@
 const loginStyle = theme => ({
   paper: {
-    marginTop: theme.spacing(15),
+    marginTop: theme.spacing(10),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

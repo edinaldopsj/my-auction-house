@@ -21,7 +21,15 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'no-use-before-define': 'off',
     'react/react-in-jsx-scope': 'off',
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'all',
+        arrowParens: 'avoid',
+        endOfLine: 'auto',
+      },
+    ],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'no-underscore-dangle': 'off',
     'jsx-a11y/label-has-associated-control': [

@@ -16,14 +16,13 @@ const useStyles = makeStyles(styles);
 export default function Login({ history }) {
   const classes = useStyles();
 
-  const [email, setEmail] = useState('admin@email.com');
+  const [email, setEmail] = useState('user1');
   const [password, setPassword] = useState('mypass');
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    if (email === 'admin@email.com' && password === 'mypass')
-      history.push('/home');
+    if (email === 'user1' && password === 'mypass') history.push('/home');
   };
 
   return (
