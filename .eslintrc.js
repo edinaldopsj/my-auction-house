@@ -17,13 +17,11 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks', 'prettier'],
   rules: {
-    'prettier/prettier': [
-      'error',
-      { singleQuote: true, arrowParens: 'avoid', trailingComma: 'all' },
-    ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'off',
+    'no-use-before-define': 'off',
     'react/react-in-jsx-scope': 'off',
+    'prettier/prettier': 'error',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'no-underscore-dangle': 'off',
     'jsx-a11y/label-has-associated-control': [
