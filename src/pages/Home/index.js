@@ -54,8 +54,8 @@ export default function Home() {
     setFilteredItems(
       filteredItems.filter(
         v =>
-          v.description.toLowerCase().includes(search.toLowerCase()) ||
-          v.name.toLowerCase().includes(search.toLowerCase()),
+          v.description.toUpperCase().includes(search.toUpperCase()) ||
+          v.name.toUpperCase().includes(search.toUpperCase()),
       ),
     );
   };

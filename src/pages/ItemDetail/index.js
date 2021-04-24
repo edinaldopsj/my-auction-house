@@ -24,25 +24,46 @@ export default function ItemDetail() {
                 Flight Prototypes
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item className={classes.imageGrid} xs={12} sm={12} md={6}>
               <img
                 width="340"
                 src="https://source.unsplash.com/random"
                 alt="Unsplash"
-                style={{ borderRadius: '50%', border: '1px solid white' }}
+                className={classes.image}
               />
             </Grid>
-            <Grid item xs={12} sm={12} md={6} className={classes.bidGrid}>
-              <Typography gutterBottom variant="h5" component="h5">
-                This is an expensive product from an old artist where...
-              </Typography>
-              <Typography gutterBottom variant="h4" component="h4">
-                Latest Bids
-              </Typography>
+            <Grid item xs={12} sm={12} md={6} className={classes.titleGrid}>
+              <Grid container>
+                <Grid item xs={12} sm={12} md={12}>
+                  <Typography gutterBottom variant="h4" component="h4">
+                    Description
+                  </Typography>
+                  <Typography variant="subtitle1" gutterBottom>
+                    This is an expensive product from an old artist where...
+                    subtitle1. Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Quos blanditiis tenetur
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} className={classes.bidGrid}>
+                  <Typography gutterBottom variant="h4" component="h4">
+                    Latest Bids
+                  </Typography>
+
+                  <Typography variant="body1" gutterBottom>
+                    U$ 42.00 - 3 minutes ago
+                  </Typography>
+                  <Typography variant="body1" gutterBottom>
+                    U$ 34.00 - 4 minutes ago
+                  </Typography>
+                  <Typography variant="body1" gutterBottom>
+                    U$ 30.00 - 1 hour ago
+                  </Typography>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
-          <Grid container className={classes.center}>
-            <Link to="/">
+          <Grid container className={classes.gridBottom}>
+            <Link to="/home">
               <Button size="small" color="default">
                 Go back
               </Button>

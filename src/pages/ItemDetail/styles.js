@@ -3,7 +3,7 @@ const itemDetail = theme => ({
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(8),
   },
-  bidGrid: {
+  titleGrid: {
     display: 'flex',
     textAlign: 'center',
     flexDirection: 'column',
@@ -14,6 +14,23 @@ const itemDetail = theme => ({
     flexDirection: 'column',
     textAlign: 'center',
     paddingBottom: theme.spacing(5),
+  },
+  image: {
+    borderRadius: '50%',
+    border: '1px solid white',
+  },
+  imageGrid: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  gridBottom: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  bidGrid: {
+    paddingTop: theme.spacing(5),
   },
 });
 
