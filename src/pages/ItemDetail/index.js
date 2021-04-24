@@ -33,8 +33,8 @@ export default function ItemDetail() {
               />
             </Grid>
             <Grid item xs={12} sm={12} md={6} className={classes.titleGrid}>
-              <Grid container>
-                <Grid item xs={12} sm={12} md={12}>
+              <Grid container style={{ justifyContent: 'center' }}>
+                <Grid item xs={12} sm={8} md={8}>
                   <Typography gutterBottom variant="h4" component="h4">
                     Description
                   </Typography>
@@ -45,10 +45,17 @@ export default function ItemDetail() {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sm={12} md={12} className={classes.bidGrid}>
+                  <Button
+                    className={classes.bidButton}
+                    variant="contained"
+                    size="large"
+                    color="primary"
+                  >
+                    Bid Now
+                  </Button>
                   <Typography gutterBottom variant="h4" component="h4">
                     Latest Bids
                   </Typography>
-
                   <Typography variant="body1" gutterBottom>
                     U$ 42.00 - 3 minutes ago
                   </Typography>

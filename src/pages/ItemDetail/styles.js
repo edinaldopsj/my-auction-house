@@ -32,6 +32,10 @@ const itemDetail = theme => ({
   bidGrid: {
     paddingTop: theme.spacing(5),
   },
+  bidButton: {
+    padding: theme.spacing(2),
+    marginBottom: theme.spacing(3),
+  },
 });
 
 export default itemDetail;
