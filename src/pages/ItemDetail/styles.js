@@ -28,6 +28,7 @@ const itemDetail = theme => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
+    paddingBottom: theme.spacing(2),
   },
   bidGrid: {
     paddingTop: theme.spacing(5),
@@ -35,6 +36,9 @@ const itemDetail = theme => ({
   bidButton: {
     padding: theme.spacing(2),
     marginBottom: theme.spacing(3),
+  },
+  bidInput: {
+    textAlign: 'center',
   },
 });
 

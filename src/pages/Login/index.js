@@ -22,7 +22,13 @@ export default function Login({ history }) {
   const handleSubmit = e => {
     e.preventDefault();
 
-    if (email === 'user1' && password === 'mypass') history.push('/home');
+    if (
+      (email === 'user1' && password === 'mypass') ||
+      (email === 'user2' && password === 'mypass2')
+    ) {
+      localStorage.setItem('user', email);
+      history.push('/home');
+    }
   };
 
   return (

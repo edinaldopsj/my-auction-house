@@ -14,36 +14,26 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from './styles';
 
+import api from '../../services/api';
+
 const useStyles = makeStyles(styles);
 
 export default function Home() {
   const classes = useStyles();
 
   const [search, setSearch] = useState('');
-  // eslint-disable-next-line no-unused-vars
-  const [items, setItems] = useState([
-    {
-      id: 'hasjdklfhaklsjdfhajdklsh23',
-      name: 'Flight Prototypes',
-      price: 2300.89,
-      description: 'This is an expensive product from an old artist where...',
-      dueDate: '',
-    },
-    {
-      id: '847318274913748fdjkadsfhkj1h3',
-      name: 'The Meaningful Tweet',
-      price: 15789.35,
-      description: 'There is the only one NFT avaliable for this tweet',
-      dueDate: '',
-    },
-    {
-      id: 'hyudkjfahdsjkfh35',
-      name: 'Monalisa returns',
-      price: 434.78,
-      description: 'This painting belonged to a famous person in Italy',
-      dueDate: '',
-    },
-  ]);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    async function loadItems() {
+      const response = await api.get('/items');
+
+      setItems(response.data.items);
+      setFilteredItems(response.data.items);
+    }
+
+    loadItems();
+  }, []);
 
   const [filteredItems, setFilteredItems] = useState([]);
 
@@ -109,7 +99,7 @@ export default function Home() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image="https://picsum.photos/1000/1000"
                     title={`${id}`}
                   />
                   <CardContent className={classes.cardContent}>
@@ -122,7 +112,7 @@ export default function Home() {
                     <Typography>{description}</Typography>
                   </CardContent>
                   <CardActions className={classes.cardActions}>
-                    <Link to="/item">
+                    <Link to={`item/${id}`}>
                       <Button variant="contained" color="default">
                         Bid now!
                       </Button>
