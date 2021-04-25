@@ -1,5 +1,5 @@
-# AIRCNC - 2021 - Frontend
-2021 Version of Bootcamp projetct AirCNC - Find a spot!
+# React's My Auction House - 2021 - Frontend
+My React's Auction house code challenge - in development.
 ## Available Scripts
 
 In the project directory, you can run:
